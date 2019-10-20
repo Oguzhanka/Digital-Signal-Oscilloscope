@@ -1,3 +1,4 @@
+Authors: Oguzhan Karaahmetoglu, Mete Can Kaya
 # Project Description
 
 ​	Aim of this project is to design a digital signal oscilloscope using Verilog HDL and an FPGA. For demonstration purposes, DE1-SOC 5CSEMA5F31C6 was used for implementation. And the algorithms were implemented using Verilog HDL and SysVerilog. ADC module of the FPGA was used to sample and quantize an analog signal to 12 bits. After sampling the input signal, a computation block will perform arithmetic operations on the digital signal to compute the period, root-mean-square, minimum, maximum and various other properties of the digital signal. These values are then printed on the screen. For this purpose, a 640x480 VGA screen is used and VGA module of the FPGA was used. 
