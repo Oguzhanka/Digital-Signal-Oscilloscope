@@ -1,9 +1,8 @@
-Authors: Oguzhan Karaahmetoglu, Mete Can Kaya
 # Project Description
 
 ​	Aim of this project is to design a digital signal oscilloscope using Verilog HDL and an FPGA. For demonstration purposes, DE1-SOC 5CSEMA5F31C6 was used for implementation. And the algorithms were implemented using Verilog HDL and SysVerilog. ADC module of the FPGA was used to sample and quantize an analog signal to 12 bits. After sampling the input signal, a computation block will perform arithmetic operations on the digital signal to compute the period, root-mean-square, minimum, maximum and various other properties of the digital signal. These values are then printed on the screen. For this purpose, a 640x480 VGA screen is used and VGA module of the FPGA was used. 
 
-![1571589745700](/home/oguzhan/Downloads/WhatsApp Image 2019-10-20 at 19.43.54.jpeg)
+![1571589745700](https://raw.githubusercontent.com/Oguzhanka/Digital-Signal-Oscilloscope/master/IMAGES/img.png)
 
 ​	In the above figure you can see the overall diagram of the design.
 
@@ -69,7 +68,7 @@ Authors: Oguzhan Karaahmetoglu, Mete Can Kaya
 
 ​	Color masks are stored in three separate arrays RED, GREEN, BLUE. In this project, grid area and measurement numbers are colored with green hence their positions are stored in that array. Observe the below figure which shows the oscilloscope screen.
 
-![1571592818559](/home/oguzhan/Downloads/WhatsApp Image 2019-10-20 at 20.33.15.jpeg)
+![1571592818559](https://raw.githubusercontent.com/Oguzhanka/Digital-Signal-Oscilloscope/master/IMAGES/img.png)
 
 ​	As seen from the figure, periodic grid values are generated together with the thick axis lines. Generating lines on VGA screen is easy considering that modeling and calculating their positions are as easy as (grid = 1 ? (x_count==320); 0). However generating alphanumeric codes are hard since for a 16x8 pixel area, one should encode the mask of every single character. Instead of doing so, a project available on the web[1]
 was used as a template since every ASCII character was encoded and can be printed on the screen by just calling its hexadecimal ASCII code. The strings are printed by calling characters sequentially.
@@ -94,20 +93,20 @@ was used as a template since every ASCII character was encoded and can be printe
 
 
 
-![1571592818559](/home/oguzhan/Desktop/dso/screen_sample_input.jpeg)
+![1571592818559](https://raw.githubusercontent.com/Oguzhanka/Digital-Signal-Oscilloscope/master/IMAGES/screen_sample_input.jpeg)
 
-![1571592818559](/home/oguzhan/Desktop/dso/screen_sample.jpeg)
+![1571592818559](https://raw.githubusercontent.com/Oguzhanka/Digital-Signal-Oscilloscope/master/IMAGES/screen_sample.jpeg)
 
 
 
 ### Demo 2
 
-![1571592818559](/home/oguzhan/Desktop/dso/input_no_offset.jpeg)
+![1571592818559](https://raw.githubusercontent.com/Oguzhanka/Digital-Signal-Oscilloscope/master/IMAGES/input_no_offset.jpeg)
 
-![1571592818559](/home/oguzhan/Desktop/dso/screen_no_offset.jpeg)
+![1571592818559](https://raw.githubusercontent.com/Oguzhanka/Digital-Signal-Oscilloscope/master/IMAGES/screen_no_offset.jpeg)
 
 
 
 ### Demo 3
 
-![1571592818559](/home/oguzhan/Desktop/dso/screen_offset.jpeg)
+![1571592818559](https://raw.githubusercontent.com/Oguzhanka/Digital-Signal-Oscilloscope/master/IMAGES/screen_offset.jpeg)
