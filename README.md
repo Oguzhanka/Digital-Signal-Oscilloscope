@@ -1,4 +1,4 @@
-Authors: Oguzhan Karaahmetoglu, Mete Can Kaya
+Authors: Oguzhan Karaahmetoglu, Mete Can Kaya (Rest in Peace, my friend)
 
 # Project Description
 
